@@ -1,7 +1,13 @@
 <template>
   <div class="hello">
     <div class="left">
-      <h1>{{ custom }}</h1>
+      <h1>{{ title }}</h1>
+
+      <ul>
+        <li v-for="(link, index) in links" v-bind:key="index">
+          {{ link }}
+        </li>
+      </ul>
     </div>
     <div class="right"></div>
   </div>
@@ -12,9 +18,10 @@ import { mapState } from "vuex";
 
 export default {
   name: "HelloWorld",
-  computed: mapState({
-    custom: "title"
-  })
+  computed: mapState([
+    'title',
+    'links'
+  ])
 };
 </script>
 
