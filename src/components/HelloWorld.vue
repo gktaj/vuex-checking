@@ -3,6 +3,10 @@
     <div class="left">
       <h1>{{ title }}</h1>
 
+      <form @submit.prevent="addLink">
+        <input class="link-input" type="text" placeholder="Add a Link" v-model="newLink">
+      </form>
+
       <ul>
         <li v-for="(link, index) in links" v-bind:key="index">{{ link }}</li>
       </ul>
