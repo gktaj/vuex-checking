@@ -87,4 +87,13 @@ ul li {
   grid-area: right;
   background-color: #e9e9e9;
 }
+
+input {
+  border: none;
+  padding: 20px;
+  width: calc(100% - 40px);
+  box-shadow: 0 5px 5px lightgrey;
+  margin-bottom: 50px;
+  outline: none;
+}
 </style>
