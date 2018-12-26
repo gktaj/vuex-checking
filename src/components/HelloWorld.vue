@@ -19,14 +19,31 @@
 
 <script>
 import Stats from "@/components/Stats.vue";
-import { mapState } from "vuex";
+import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "HelloWorld",
+  data() {
+    return {
+      newLink: ''
+    }
+  },
   components: {
     Stats
   },
-  computed: mapState(["title", "links"])
+  computed: mapState([
+    "title",
+    "links"
+  ]),
+  methods: {
+    ...mapMutations([
+      'ADD_LINK'
+    ]),
+    addLink: function() {
+      this.ADD_LINK(this.newLink)
+      this.newLink = ''
+    }
+  }
 };
 </script>
 
