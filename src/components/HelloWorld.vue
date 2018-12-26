@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="left">
-      <h1>{{ title }}</h1>
+      <h1>{{ custom }}</h1>
     </div>
     <div class="right"></div>
   </div>
@@ -12,9 +12,9 @@ import { mapState } from "vuex";
 
 export default {
   name: "HelloWorld",
-  computed: mapState([
-    "title"
-  ])
+  computed: mapState({
+    custom: "title"
+  })
 };
 </script>
 
