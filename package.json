@@ -2,10 +2,12 @@
   "name": "vuex-checking",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/kdevsoftware/vuex-checking",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages"
   },
   "dependencies": {
     "vue": "^2.5.17",
@@ -19,6 +21,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.5.17"
   }
 }
