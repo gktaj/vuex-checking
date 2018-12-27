@@ -1,3 +1,3 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production' ? '/my-project/' : '/'
+  baseUrl: process.env.NODE_ENV === 'production' ? '/vuex-checking/' : '/'
 }
